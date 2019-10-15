@@ -1,0 +1,52 @@
+.card {
+    font-family: 'Open Sans', sans-serif;
+    transition: all 600ms ease;
+    max-width: 400px;
+    width: 400px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    filter: drop-shadow(0 2px 1rem #112) brightness(1);
+    border-radius: 4px;
+    opacity: 0.2;
+}
+.card:hover {
+    opacity: 1;
+    filter: drop-shadow(0 2px 1rem #112);
+}
+.card .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    height: 100%;
+    max-height: 40px;
+    padding: 11px 30px;
+    border-radius: 0;
+    background: #fff;
+    color: #202032;
+    text-align: right;
+}
+.card img {
+    position: relative;
+    border-radius: 50%;
+    top: -5px;
+    height: 80px;
+    width: 80px;
+    z-index: 10;
+    float: left;
+}
+.card .info {
+    margin-top: 60px;
+    height: 80px;
+    width: 100%;
+    padding: 10px 30px;
+    background: #313648;
+    color: #fff;
+    font-size: 1rem;
+    text-align: right;
+}
+.card .info .email {
+    color: #00ffff;
+}
