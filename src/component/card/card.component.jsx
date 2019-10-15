@@ -2,19 +2,18 @@ import React from "react";
 import './card.style.css';
 
 export default function Card(props) {
-  const { name: { title, first, last }, email, picture: { medium }, location } = props;
-  const { street: {number, name}, city, state, country } = location;
+  const { name, email, photo, location, state } = props;
   return <div className={"card"}>
     <div className={"header"}>
-      <img src={medium} />
-      {title}. {last + " " + first} </div>
+      <img src={photo} alt={name} />
+      {name} </div>
     <div className={"info"}>
       <span className={'email'}> { email } </span>
       <br/>
       <span className="fa fa-home"/>
-      {" "} {number} {name} {city},
+      {location},
       <br/>
-      {state} {country}
+      {state}
     </div>
   </div>;
 }
