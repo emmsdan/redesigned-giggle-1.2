@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import CardList from "./component/card-list/card-list.component";
 import {formatUser, search} from "./utils/utils";
+import Search from "./component/Search/Search.component";
 
 class App extends React.Component{
   constructor() {
@@ -36,7 +37,9 @@ class App extends React.Component{
         <header className="App-header">
           <h1>{this.state.title}</h1>
           {!this.state.showCards && <p>please, wait loading contents </p>}
-          {this.state.showCards && <CardList onchange={(e) => this.onChange(e)} users={this.state.tempUsers}/>}
+
+          {this.state.showCards && <Search handOnChange={(e) => this.onChange(e)} />}
+          {this.state.showCards && <CardList users={this.state.tempUsers}/>}
         </header>
       </div>
     </>;
